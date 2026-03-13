@@ -1,0 +1,64 @@
+---
+import '../styles/globals.css';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title,
+  description = "Portal de eventos y cultura de la Intendencia de Lavalleja. Descubrí qué hacer en Minas y alrededores.",
+  keywords = "Lavalleja, Cultura, Eventos, Minas, Uruguay, Tablón Cultural, Arte, Teatro, Música",
+  image = "/images/og-image.webp",
+  canonicalURL = Astro.url.href,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Global Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600;800&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <ClientRouter />
+  </head>
+  <body class="bg-gray-900 text-white selection:bg-purple-500 selection:text-white overflow-x-hidden">
+    <slot />
+  </body>
+</html>
