@@ -1,0 +1,11 @@
+# Connect only to the isolated backend QA network, never production services.
+services:
+  frontend:
+    ports: ["127.0.0.1:8088:80"]
+    environment:
+      BACKEND_URL: http://backend:8000
+    networks: [qa]
+networks:
+  qa:
+    external: true
+    name: ${QA_BACKEND_NETWORK:-tablon-qa_default}

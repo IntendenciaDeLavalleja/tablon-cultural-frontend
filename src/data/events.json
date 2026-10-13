@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "Noche de los Museos",
+    "locality": "Minas",
+    "address": "Casa de la Cultura",
+    "datetime": "Viernes 12/12, 20:00hs",
+    "description": "Una velada mágica recorriendo la historia y el arte de nuestra ciudad bajo la luz de la luna. Incluye música en vivo y degustación de productos locales.",
+    "image": "https://images.unsplash.com/photo-1518998053502-5190a3915a25?auto=format&fit=crop&q=80&w=800",
+    "category": "Cultura"
+  },
+  {
+    "id": "2",
+    "title": "Festival del Olimar",
+    "locality": "J.P. Varela",
+    "address": "Parque del Río",
+    "datetime": "15/01 al 17/01",
+    "description": "El festival más grande de la región vuelve con artistas nacionales e internacionales. Tres días de música, camping y tradición a orillas del río.",
+    "image": "https://images.unsplash.com/photo-1459749411177-042180ce673c?auto=format&fit=crop&q=80&w=800",
+    "category": "Música"
+  },
+  {
+    "id": "3",
+    "title": "Taller de Cerámica",
+    "locality": "Solís de Mataojo",
+    "address": "Centro Cultural",
+    "datetime": "Jueves, 17:00hs",
+    "description": "Aprendé las técnicas milenarias del modelado en barro. Un espacio de meditación y creación para todas las edades.",
+    "image": "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=800",
+    "category": "Taller"
+  },
+  {
+    "id": "4",
+    "title": "Cine al aire libre",
+    "locality": "Mariscala",
+    "address": "Plaza Principal",
+    "datetime": "Sábado 20, 21:00hs",
+    "description": "Proyección de clásicos del cine nacional bajo las estrellas. Traé tu silla y disfrutá de una noche diferente en familia.",
+    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80&w=800",
+    "category": "Cine"
+  },
+  {
+    "id": "5",
+    "title": "Teatro: El Fantasma",
+    "locality": "Minas",
+    "address": "Teatro Lavalleja",
+    "datetime": "20/12, 21:00hs",
+    "description": "Una obra de suspenso y drama que ha cautivado a la crítica. Una puesta en escena vanguardista en el corazón de Minas.",
+    "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&q=80&w=800",
+    "category": "Teatro"
+  },
+  {
+    "id": "6",
+    "title": "Feria Gastronómica",
+    "locality": "Villa del Rosario",
+    "address": "Club Social",
+    "datetime": "Domingo 12:00hs",
+    "description": "Sabores auténticos de nuestra tierra. Cordero, quesos artesanales y los mejores vinos de la zona en un ambiente festivo.",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+    "category": "Gastronomía"
+  }
+]

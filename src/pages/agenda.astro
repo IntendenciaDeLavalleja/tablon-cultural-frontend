@@ -1,0 +1,12 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { AgendaApp } from '../components/app/AgendaApp';
+---
+
+<MainLayout 
+  title="Agenda Completa | Tablón Cultural Lavalleja"
+  description="Descubre la programación completa de eventos, talleres y espectáculos en Lavalleja."
+  keywords="Agenda, Eventos, Lavalleja, Teatro, Música, Cine, Minas"
+>
+  <AgendaApp client:load />
+</MainLayout>

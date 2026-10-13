@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --color-neon-purple: #a855f7;
+  --color-paper: #fefce8;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gray-900 text-white overflow-x-hidden;
+}
+
+.font-ink {
+  font-family: 'Kalam', cursive;
+}
+
+.font-gallery {
+  font-family: 'Cinzel', serif;
+}
+
+/* Aurora Background */
+.bg-aurora {
+  background: radial-gradient(circle at 50% 0%, #2e1065 0%, #0f172a 50%, #000000 100%);
+  background-attachment: fixed;
+}
+
+/* Neon Frame Animation */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--color-neon-purple), 0 0 10px var(--color-neon-purple), 0 0 20px var(--color-neon-purple);
+    border-color: var(--color-neon-purple);
+  }
+  50% {
+    box-shadow: 0 0 2px var(--color-neon-purple), 0 0 5px var(--color-neon-purple), 0 0 10px var(--color-neon-purple);
+    border-color: #7e22ce;
+  }
+}
+
+.neon-border {
+  border: 2px solid var(--color-neon-purple);
+  animation: neonPulse 3s infinite alternate;
+}
+
+/* Paper Note Styles */
+.paper-note {
+  background-color: var(--color-paper);
+  color: #1f2937;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paper-note::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #ef4444; /* Red pin head */
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+/* Board Background */
+.board-bg {
+  background-color: #5c4033; /* Fallback cork color */
+  background-image: url('/images/board.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.board-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  inset: 0;
+}
+
+/* Hover Glow */
+.hover-glow:hover {
+  box-shadow: 0 0 15px var(--color-neon-purple);
+}

@@ -1,0 +1,16 @@
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        SITE_URL: ${SITE_URL:?Set the frontend public URL}
+        PUBLIC_BACKEND_URL: ${PUBLIC_BACKEND_URL:-}
+    restart: unless-stopped
+    expose: ["80"]
+    environment:
+      BACKEND_URL: ${BACKEND_URL:?Set the reachable backend URL}
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

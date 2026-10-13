@@ -1,0 +1,9 @@
+*
+!package.json
+!package-lock.json
+!astro.config.mjs
+!tsconfig.json
+!src/**
+!public/**
+!deploy/nginx.conf.template
+!Dockerfile
