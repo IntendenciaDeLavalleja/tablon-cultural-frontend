@@ -1,5 +1,5 @@
 {
-  "name": "tablon-cultural-frontend",
+  "name": "tablon-cultural",
   "type": "module",
   "version": "0.0.1",
   "overrides": {
@@ -14,7 +14,8 @@
     "astro": "astro",
     "check": "astro check",
     "test": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "build:admin": "tailwindcss -i backend/admin.css -o backend/app/static/admin.css --minify"
   },
   "dependencies": {
     "@astrojs/react": "^7.0.0",
@@ -44,6 +45,5 @@
     "esbuild": "^0.28.2",
     "typescript": "^5.9.3",
     "vitest": "^5.0.1"
-  },
-  "private": true
+  }
 }

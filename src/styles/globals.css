@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
+/* Escanea todo src/ para que el CSS no dependa de los módulos cargados en cada página (evita estilos perdidos al navegar en dev). */
+@source "../";
 
 :root {
   --color-neon-purple: #a855f7;
